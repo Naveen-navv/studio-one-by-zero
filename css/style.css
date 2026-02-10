@@ -1,0 +1,953 @@
+* {
+    margin: 0px;
+    font-family: 'roboto';
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+#property-header .dropdown-menu {
+    position: absolute;
+    padding: 0.5rem 0 0.5rem 0;
+    left: 0rem;
+    white-space: nowrap;
+    text-align: left;
+    padding: 0px 0 0px 0;
+    background-color: #0b1f44;
+    z-index: 556;
+    transition: all .3s linear;
+    top: 130%;
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+    margin-top: 0;
+}
+
+
+
+#property-header .navbar-nav .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+
+#property-header .navbar-nav li {
+    position: relative;
+}
+
+.header-area .sticky-logo-img {
+    display: none;
+}
+
+.sticky_header .sticky-logo-img {
+    display: block;
+}
+
+.sticky_header .header-logo-img {
+    display: none;
+}
+
+#property-header .navbar-nav .nav-item .nav-link::after {
+    content: unset;
+}
+
+#property-header .navbar-nav .nav-item .nav-link i {
+    padding-left: 14px;
+}
+
+#property-header .navbar-nav .nav-item .nav-link {
+    letter-spacing: 1px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    align-items: center;
+    transition: 0.4s;
+    font-family: 'roboto';
+    text-transform: uppercase;
+    letter-spacing: normal;
+    color: #BAA170;
+}
+
+#property-header.sticky_header .navbar-nav .nav-item .nav-link {
+    color: #BAA170 !important;
+}
+
+#property-header .navbar-dark .navbar-nav .nav-link:hover {
+    color: #2F3191 !important;
+    transition: all .3s linear;
+}
+
+/* #property-header .navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: #399244 !important;
+    transition: all .3s linear;
+} */
+
+#property-header .dropdown-item.active,
+.dropdown-item:active {
+    color: #DEE1E3;
+    text-decoration: none;
+    background-color: #399244;
+}
+
+#property-header .navbar-dark .navbar-nav .nav-link:hover.nav-link::before {
+    opacity: 1;
+    transition: all .3s linear;
+}
+
+#property-header .navbar-dark .navbar-nav .nav-link:hover:after {
+    opacity: 1;
+    transition: all .3s linear;
+}
+
+#property-header .dropdown-item:hover {
+    color: #2F3191;
+    background-color: transparent;
+}
+
+#property-header .dropdown-item {
+    color: #DEE1E3;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'roboto';
+    letter-spacing: 1px;
+    transition: 0.3s ease-out;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+}
+
+#property-header .nav-link.active,
+#footer-sec .nav-link.active {
+    border-bottom: 2px solid #fff;
+    width: fit-content;
+}
+
+#property-header .nav-link.active.nav-link::before {
+    opacity: 1;
+    transition: all .3s linear;
+}
+
+#property-header .navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+.bg_load {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: url(../images/loading-icon.gif) 50% 50% no-repeat #000;
+}
+
+.bg-contact .navbar {
+    background-color: #f6cabf !important;
+    border-bottom: 0.063rem solid #f6beb1 !important;
+}
+
+.header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+/* .navbar-light .navbar-nav .nav-link.active-menu { */
+/* color: #fff; */
+/* } */
+
+.sticky_header {
+    position: fixed !important;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-animation-name: fadeInDown;
+    animation-duration: 1s;
+
+}
+
+.header-area.sticky_header {
+    background: #fff;
+}
+
+.scrollToTop {
+    background-image: url(../images/apple-scroll-to-top.png);
+    width: 46px;
+    height: 40px;
+    position: fixed;
+    right: 82px;
+    bottom: 63px;
+    background-repeat: no-repeat;
+    z-index: 99;
+}
+
+.navbar-collapse.collapse.show li.nav-item {
+    color: #000;
+}
+
+/*----onscroll animation start-----*/
+.animation-element.slide-top {
+    opacity: 0;
+    -moz-transition: all 600ms linear;
+    -webkit-transition: all 600ms linear;
+    -o-transition: all 600ms linear;
+    transition: all 600ms linear;
+    -moz-transform: translate3d(0px, -60px, 0px);
+    -webkit-transform: translate3d(0px, -60px, 0px);
+    -o-transform: translate(0px, -60px);
+    -ms-transform: translate(0px, -60px);
+    transform: translate3d(0px, -60px, 0px);
+}
+
+.animation-element.slide-btm {
+    opacity: 0;
+    -moz-transition: all 600ms linear;
+    -webkit-transition: all 600ms linear;
+    -o-transition: all 600ms linear;
+    transition: all 600ms linear;
+    -moz-transform: translate3d(0px, 60px, 0px);
+    -webkit-transform: translate3d(0px, 60px, 0px);
+    -o-transform: translate(0px, 60px);
+    -ms-transform: translate(0px, 60px);
+    transform: translate3d(0px, 60px, 0px);
+}
+
+.animation-element.slide-left {
+    opacity: 0;
+    transition: all 0.6s linear;
+    -moz-transform: translate3d(-50px, 0, 0);
+    -webkit-transform: translate3d(-50px, 0, 0);
+    -o-transform: translate(-50px, 0);
+    -ms-transform: translate(-50px, 0);
+    transform: translate3d(-50px, 0, 0);
+}
+
+.animation-element.slide-right {
+    opacity: 0;
+    transition: all 0.6s linear;
+    -moz-transform: translate3d(50px, 0, 0);
+    -webkit-transform: translate3d(50px, 0, 0);
+    -o-transform: translate(50px, 0);
+    -ms-transform: translate(50px, 0);
+    transform: translate3d(50px, 0, 0);
+}
+
+.animation-element.fade-in {
+    opacity: 0;
+    transition: all 1s linear;
+    transition-delay: 0.2s;
+}
+
+.animation-element.fade-in.in-view {
+    opacity: 1;
+}
+
+.animation-element.slide-left.in-view,
+.animation-element.slide-top.in-view,
+.animation-element.slide-right.in-view,
+.animation-element.slide-btm.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+}
+
+/*----onscroll animation end-----*/
+
+.header-area {
+    padding-top: 0px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: .9px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #030614;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #399244;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    /* color: #62CEC5 !important; */
+    transition: all .3s linear;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover:after {
+    opacity: 1;
+    transition: all .3s linear;
+}
+
+a.nav-link {
+    position: relative;
+}
+
+.header-button {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 12rem;
+    padding: 0.375rem 1.55rem;
+    border-radius: 50px;
+    background-color: #62CEC5;
+}
+
+.container {
+    padding-right: 8vw !important;
+    padding-left: 8vw !important;
+    margin: unset !important;
+    max-width: unset;
+}
+
+/* .navbar-dark .navbar-nav .nav-link {
+    padding: 1rem 1rem;
+} */
+
+/* .navbar {
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+} */
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    position: relative;
+}
+
+.btn:focus {
+    box-shadow: unset;
+}
+
+.header-area {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background: #fff;
+}
+
+
+.scrollToTop {
+    background-image: url(../images/apple-scroll-to-top.png);
+    width: 46px;
+    height: 40px;
+    position: fixed;
+    right: 82px;
+    bottom: 56px;
+    background-repeat: no-repeat;
+    z-index: 99;
+}
+
+.btn.btn-primary.border-0:active:focus,
+.btn-primary:focus {
+    background: #f36a3a !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: unset !important;
+}
+
+
+
+.footer-menu-sec a:hover {
+    color: #399244;
+}
+
+
+
+
+@media (max-width: 767px) {
+
+
+    .top-header {
+        padding: 0;
+        background-color: transparent !important;
+    }
+
+    .header-btn .zoop-btn {
+        padding: 0rem 0rem !important;
+        font-weight: 400 !important;
+        color: #000 !important;
+    }
+
+    .sticky-social {
+        display: none;
+    }
+
+    .h-height {
+        height: 156px;
+    }
+
+    .navbar-dark .navbar-toggler {
+        color: unset !important;
+        border-color: unset !important;
+        box-shadow: unset !important;
+    }
+
+    .scrollToTop {
+        right: 20px;
+    }
+
+    .container {
+        padding: 0px 15px !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link::before {
+        content: unset;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: #000 !important;
+    }
+
+    .navbar-nav {
+        margin-top: 10px !important;
+    }
+
+    .scrollToTop {
+        background-image: url(../images/apple-scroll-to-top.png);
+        width: 46px;
+        height: 40px;
+        position: fixed;
+        right: 27px;
+        bottom: 20px;
+        background-repeat: no-repeat;
+        z-index: 99;
+    }
+
+    /*.header-area {*/
+    /*    background-color: #000;*/
+    /*}*/
+
+    .header-button {
+        margin-left: unset !important;
+        padding: 8px 20px !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:after {
+        position: unset !important;
+    }
+
+    /* .navbar-brand img {
+        width: 160px;
+    } */
+}
+
+@media(min-width:768px) and (max-width:991px) {
+    .navbar-dark .navbar-nav .nav-link::before {
+        content: unset;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        padding: .5rem 0rem;
+    }
+
+    .navbar-nav {
+        margin-top: 10px !important;
+    }
+
+    .header-btn .zoop-btn {
+        padding: 0rem 0rem;
+    }
+
+    .header-btn .zoop-btn {
+        font-weight: 400;
+        background: transparent !important;
+        color: rgba(0, 0, 0, .7) !important;
+        font-weight: 400 !important;
+    }
+
+    .header-btn .zoop-btn.btn-primary:hover {
+        background: transparent !important;
+    }
+
+    .scrollToTop {
+        background-image: url(../images/apple-scroll-to-top.png);
+        width: 46px;
+        height: 40px;
+        position: fixed;
+        right: 40px;
+        bottom: 20px;
+        background-repeat: no-repeat;
+        z-index: 99;
+    }
+
+    .header-button {
+        margin-left: unset !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .scrollToTop {
+        background-image: url(../images/apple-scroll-to-top.png);
+        width: 46px;
+        height: 40px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-repeat: no-repeat;
+        z-index: 99;
+    }
+}
+
+/* css start  */
+section.banner-sec {
+    padding-top: 114px;
+}
+
+h2.sec-head {
+    font-size: 40px;
+    font-weight: 600;
+    color: #BAA170;
+    line-height: 55px;
+    font-family: 'Open Sans';
+}
+
+p {
+    color: #6B6B6B;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+h3 {
+    font-size: 30px;
+    color: #BAA170;
+    line-height: 40px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+.single-proj-cont {
+    padding: 20px 0;
+}
+
+.single-proj-cont span {
+    color: #6B6B6B;
+}
+
+.btn-wrap a {
+    border: 1px solid;
+    text-decoration: none;
+    color: #BAA170;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.btn-wrap {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* slider css start  */
+
+#page{
+    width:100%;
+    height:100%;
+    position:absolute;
+  }
+  
+  /* Our normalize css */
+  *{
+    margin:0;
+    box-sizing: border-box;
+  }
+  
+  /* Our wrapper */
+  .wrapper{
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate3d(-50%,-50%,0);
+    overflow:hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  
+  /* Our image information */
+  .before,
+  .after {
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+    pointer-events:none;
+    overflow: hidden;
+  }
+  
+  .content-image{
+    height:100%;
+  }
+  
+  .after{
+    width:125px;
+  }
+  
+  .scroller{
+    width: 50px;
+    height:50px;
+    position: absolute;
+    left:100px;
+    top:50%;
+    transform:translateY(-50%);
+    border-radius:50%;
+    background-color: transparent;
+    opacity:0.9;
+    pointer-events:auto;
+    cursor: pointer;
+  }
+  
+  .scroller:hover{
+    opacity:1;
+  }
+  
+  .scrolling{
+    pointer-events:none;
+    opacity:1;
+     /* z-index: 1; */
+  }
+  
+  .scroller__thumb{
+    width:100%;
+    height:100%;
+    padding:5px;
+  }
+  
+  .scroller:before,
+  .scroller:after{
+    content:" ";
+    display: block;
+    width: 7px;
+    height: 9999px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3.5px;
+    z-index: 30;
+    transition:0.1s;
+  }
+  .scroller:before{
+    top:100%;
+  }
+  .scroller:after{
+    bottom:100%;
+  }
+  
+  /* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
+  .scroller{
+    border: 5px solid #fff;
+  }
+  .scroller:before,
+  .scroller:after{
+    background: #fff;
+  }
+  .transforming-slider-sec {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+.single-goal-box img {
+    width: auto;
+    max-width: 100%;
+}
+
+.single-goal-box h3 {
+    padding: 20px 0 10px;
+}
+.goal-sec-wrap h2 {
+    padding-bottom: 30px;
+}
+h4 {
+    font-size: 30px;
+    font-family: 'Open Sans';
+    line-height: 48px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+section.testimonials-sec h2 {
+    padding-bottom: 20px;
+}
+h5 {
+    font-size: 20px;
+    color: #BAA170;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+h5 span {
+    font-size: 18px;
+}
+.single-testimonial h4{
+    color: #6B6B6B;
+}
+.single-article-wrap img {
+    width: auto;
+    max-width: 100%;
+}
+section.articles-sec h2 {
+    padding-bottom: 30px;
+}
+
+.single-article-wrap img {
+    padding-bottom: 20px;
+}
+
+.single-article-wrap {
+    margin-bottom: 30px;
+}
+section > .container::after {
+    border-bottom: 1px solid #c5c5c5;
+    content: '';
+    position: absolute;
+    width: 84%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px;
+}
+section > .container{
+    position: relative;
+}
+.owl-dots {
+    display: none;
+}
+section.featured-projects-sec h2 {
+    padding-bottom: 30px;
+}
+.single-footer-box a {
+    text-decoration: none;
+    color: #6b6b6b;
+}
+.single-footer-box img {
+    width: auto;
+    max-width: 100%;
+}
+.single-project-box {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.single-project-box::after {
+    position: absolute;
+    content: '';
+    width: 97%;
+    height: 1px;
+    background: #c5c5c5;
+    bottom: 40px;
+}
+.transforming-top-cont {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+.single-footer-box p {
+    margin-bottom: 0;
+}
+section.inner-page-banner {
+    padding-top: 114px;
+}
+.new-top-sec {
+    display: flex;
+    align-items: center;
+}
+
+.date-sec {
+    width: 10%;
+    max-width: 100%;
+    border-right: 1px solid #BAA170;
+}
+
+.date-sec h2 {
+    font-size: 56px;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke: 1px #BAA170;
+}
+
+.date-right-sec {
+    padding-left: 40px;
+}
+.single-news-sec {
+    padding-top: 40px;
+}
+
+.news-cont-wrap img {
+    padding: 40px 0px;
+}
+section.keep-in-touch .col-md-4 {
+    border: 1px solid #BAA170;
+}
+.single-contact-box {
+    padding: 20px 10px;
+}
+
+.single-contact-box a {
+    text-decoration: none;
+    color: #6b6b6b;
+}
+
+.single-contact-box p {
+    margin-bottom: 0;
+}
+
+.form-control {
+    border: none !important;
+    border-bottom: 1px solid #BAA170 !important;
+    border-radius: unset;
+}
+section.keep-in-touch h2 {
+    padding-bottom: 30px;
+}
+form .btn-wrap {
+    text-align: left;
+}
+span {
+    color: #6b6b6b;
+}
+section.team-sec h2 {
+    padding-bottom: 30px;
+}
+a.btn:hover {
+    color: #baa170;
+}
+.services-sec1 .container::after,.services-sec2 .container::after {
+    display: none;
+}
+.col-md-4.br-rl {
+    border-left: none !important;
+    border-right: none !important;
+}
+section.keep-in-touch .container::after {
+    display: none;
+}
+.map-sec .container-fluid::after{
+    border-bottom: 1px solid #c5c5c5;
+    content: '';
+    position: absolute;
+    width: 84%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px;
+}
+.map-sec .container-fluid{
+    position:relative;
+}
+.social-media-wrap img {
+    width: auto;
+    max-width: 100%;
+    margin-right: 30px;
+}
+
+/* responsive css */
+
+@media only screen and (max-width:767px) {
+    section{
+        padding-bottom: 40px;
+    }
+
+    .inner-page-banner{
+        padding-bottom: 40px;
+    }
+
+    h2.sec-head {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .date-sec {
+        padding-right: 20px;
+        width:auto;
+    }
+
+    .date-right-sec {
+        padding-left: 14px;
+    }
+
+    .single-testimonial h4 {
+        font-size: 20px;
+    line-height: 29px;
+    }
+
+    .home-about-img-sec{
+        padding-bottom:20px;
+    }
+
+    section > .container::after {
+        display:none;
+    }
+    .single-footer-box {
+        padding-bottom: 20px;
+    }
+    .footer-sec-wrap {
+        padding-bottom: 0;
+    }
+    .social-media-wrap {
+        padding-bottom: 20px;
+    }
+    .scroller {
+        left: 43% !important;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    .after {
+        width: 50% !important;
+    }
+    .transforming-slider-sec {
+        height: 377px;
+    }
+    section.team-sec h2 {
+        padding-bottom: 15px;
+    }
+    .about-content {
+        padding-bottom: 20px;
+    }
+    .services-sec2,.services-sec1 {
+        padding-bottom:0 !important;
+        margin-bottom:0!important;
+    }
+    .service-s-title h3{
+        width:auto!important;
+    }
+    form .btn-wrap {
+        padding: 20px 12px;
+    }
+    .map-sec .container-fluid::after {
+       display:none;
+    }
+    .featured-projects-sec .btn-wrap{
+        padding-top:0!important;
+    }
+    .single-contact-box h3{
+        font-size: 25px;
+    }
+    section.keep-in-touch h2 {
+         padding-bottom: 0px; 
+    }
+}
